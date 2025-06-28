@@ -1,0 +1,20 @@
+[package]
+name = "rust_practice"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/lib/mod.rs"
+
+
+# This is an array as rust can have multiple binaries in a single project.  
+# While a project can have only a single library
+# If you want multiple libraries. Use workspace feature
+[[bin]]
+name = "rust_practice"
+src = "src/main.rs"
+
+
+[dependencies]
+axum = "0.8.4"
+tokio = { version = "1.45.1", features = ["full"] }
